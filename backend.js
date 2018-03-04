@@ -1,23 +1,22 @@
-"use strict;"
+"use strict";
 
-// class Item {
-//     constructor(itemC, qtyC, prtyC, storeC, sectionC, priceC) {
-//         this.itemC = itemC;
-//         this.qtyC = qtyC;
-//         this.prtyC = prtyC;
-//         this.storeC = storeC;
-//         this.sectionC = sectionC;
-//         this.priceC = priceC;
-//     }
-// }
+class Item {
+    constructor(itemC, qtyC, prtyC, storeC, sectionC, priceC) {
+        this.itemC = itemC;
+        this.qtyC = qtyC;
+        this.prtyC = prtyC;
+        this.storeC = storeC;
+        this.sectionC = sectionC;
+        this.priceC = priceC;
+    }
+}
 
-// class ShoppingList {
-//     constructor(list) {
-//         this.list = list;
-//     }
-
-//     list = Array.from(Item)
-// }
+class ShoppingList {
+    constructor(list) {
+        this.list = list;
+    }
+    list = Array.from(new Item)
+}
 
 //function search(){}
 
@@ -34,7 +33,7 @@ function addNew() {
     let section = row.insertCell(4);
     let price = row.insertCell(5);
 
-    //let checkbox = document.createElement('input');
+    //let checkbox = document.createElement('input').appendChild;
     //checkbox.type("checkbox");
 
     //check.appendChild(checkbox);

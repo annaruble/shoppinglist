@@ -1,22 +1,22 @@
 "use strict";
 
-class Item {
-    constructor(itemC, qtyC, prtyC, storeC, sectionC, priceC) {
-        this.itemC = itemC;
-        this.qtyC = qtyC;
-        this.prtyC = prtyC;
-        this.storeC = storeC;
-        this.sectionC = sectionC;
-        this.priceC = priceC;
-    }
-}
+// class Item {
+//     constructor(itemC, qtyC, prtyC, storeC, sectionC, priceC) {
+//         this.itemC = document.getElementById("itemIn").value;;
+//         this.qtyC = qtyC;
+//         this.prtyC = prtyC;
+//         this.storeC = storeC;
+//         this.sectionC = sectionC;
+//         this.priceC = priceC;
+//     }
+// }
 
-class ShoppingList {
-    constructor(list) {
-        this.list = list;
-    }
-    list = Array.from(new Item)
-}
+// class ShoppingList {
+//     constructor(list) {
+//         this.list = list;
+//     }
+//     list = Array.from(new Item)
+// }
 
 //function search(){}
 

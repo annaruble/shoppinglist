@@ -29,10 +29,3 @@ class ShoppingView {
         parent.appendChild(row)
     }
 }
-
-// function redrawTable() {
-//     table = document.getElementsByTagName("table")
-//     tbodytag = document.getElementsByTagName("tbody")
-//     table.removeChild(tbodytag)
-// }
-

@@ -50,6 +50,12 @@ class Item {
         alert(`${this.name} was purchased`)
     }
 
+    markBought(purchased) {
+        this._purchased = purchased;
+        var striked = purchased.strike();
+        document.getElementsByTagName("tr").innerHTML = striked;
+    }
+
 }
 
 class ShoppingList extends Subject {

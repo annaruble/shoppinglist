@@ -27,6 +27,12 @@ class Subject {
         }
     }
 
+    markBought(purchased) {
+        this._purchased = purchased;
+        var striked = purchased.strike();
+        document.getElementsByTagName("tr").innerHTML = striked;
+    }
+
 }
 
 class Item {

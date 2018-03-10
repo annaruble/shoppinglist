@@ -1,6 +1,7 @@
 "use strict";
 
-
+var shoppingModel = newShoppingList()
+var myView = new ShoppingView(shoppingModel)
 //function search(){}
 
 function addNew() {
@@ -28,9 +29,3 @@ function addNew() {
     section.innerHTML = document.getElementById("sectionIn").value;
     price.innerHTML = "$" + document.getElementById("priceIn").value;
 }
-
-/*
-function clickedOn() {
-    let.lrow = document.createElement("tr")
-}
-*/

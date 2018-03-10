@@ -30,9 +30,9 @@ class ShoppingView {
     }
 }
 
-// function redrawTable() {
-//     table = document.getElementsByTagName("table")
-//     tbodytag = document.getElementsByTagName("tbody")
-//     table.removeChild(tbodytag)
-// }
+function redrawTable() {
+    table = document.getElementsByTagName("table")
+    tbodytag = document.getElementsByTagName("tbody")
+    table.removeChild(tbodytag)
+}
 

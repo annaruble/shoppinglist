@@ -2,6 +2,7 @@
 
 var shoppingModel = new ShoppingList()
 var myView = new ShoppingView(shoppingModel)
+var myDB = new LocalStorageSaver(shoppingModel, "annalist")
 
 shoppingModel.subscribe(redrawTable)
 
@@ -25,12 +26,21 @@ function addNew() {
 
     check.appendChild(checkbox);
     //check.innerHTML = "Hello"
-    item.innerHTML = document.getElementById("itemIn").value;
-    qty.innerHTML = document.getElementById("qtyIn").value;
-    priority.innerHTML = document.getElementById("priorityIn").value;
-    store.innerHTML = document.getElementById("storeIn").value;
-    section.innerHTML = document.getElementById("sectionIn").value;
-    price.innerHTML = "$" + document.getElementById("priceIn").value;
+    itemVal = document.getElementById("itemIn").value;
+    qtyVal = document.getElementById("qtyIn").value;
+    priorityVal = document.getElementById("priorityIn").value;
+    storeVal = document.getElementById("storeIn").value;
+    sectionVal = document.getElementById("sectionIn").value;
+    priceVal = "$" + document.getElementById("priceIn").value;
+
+
+    item.innerHTML = itemVal;
+    qty.innerHTML = qtyVal;
+    priority.innerHTML = priorityVal;
+    store.innerHTML = storeVal;
+    section.innerHTML = sectionVal;
+    price.innerHTML = "$" + priceVal;
+
 }
 
 function clickedon() {
@@ -85,3 +95,12 @@ function sortTable(n) {
         }
     }
 }
+
+// function storage() {
+//     localStorage.setItem(itemVal)
+//     localStorage.setItem(qtyVal)
+//     localStorage.setItem(priorityVal)
+//     localStorage.setItem(storeVal)
+//     localStorage.setItem(sectionVal)
+//     localStorage.setItem(priceVal)
+// }

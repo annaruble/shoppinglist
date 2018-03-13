@@ -1,6 +1,6 @@
 "use strict";
 
-var shoppingModel = newShoppingList()
+var shoppingModel = new ShoppingList()
 var myView = new ShoppingView(shoppingModel)
 //function search(){}
 

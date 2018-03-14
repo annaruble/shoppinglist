@@ -36,9 +36,9 @@ class Subject {
 }
 
 class Item {
-    constructor(item, quantity, priority, store, section, price) {
+    constructor(name, quantity, priority, store, section, price) {
 //        this.check = check;
-        this.item = name;
+        this.name = name;
         this.quantity = quantity;
         this.priority = priority;
         this.store = store;

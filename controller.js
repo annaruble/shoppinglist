@@ -24,23 +24,22 @@ function addNew() {
     let checkbox = document.createElement('input');
     checkbox.type = "checkbox";
 
+    /////////////////////
+    // itemVal = document.getElementById("itemIn").value;
+    // qtyVal = document.getElementById("qtyIn").value;
+    // priorityVal = document.getElementById("priorityIn").value;
+    // storeVal = document.getElementById("storeIn").value;
+    // sectionVal = document.getElementById("sectionIn").value;
+    // priceVal = "$" + document.getElementById("priceIn").value;
+
     check.appendChild(checkbox);
     //check.innerHTML = "Hello"
-    itemVal = document.getElementById("itemIn").value;
-    qtyVal = document.getElementById("qtyIn").value;
-    priorityVal = document.getElementById("priorityIn").value;
-    storeVal = document.getElementById("storeIn").value;
-    sectionVal = document.getElementById("sectionIn").value;
-    priceVal = "$" + document.getElementById("priceIn").value;
-
-
-    item.innerHTML = itemVal;
-    qty.innerHTML = qtyVal;
-    priority.innerHTML = priorityVal;
-    store.innerHTML = storeVal;
-    section.innerHTML = sectionVal;
-    price.innerHTML = "$" + priceVal;
-
+    name.innerHTML = document.getElementById("itemIn").value;
+    qty.innerHTML = document.getElementById("qtyIn").value;
+    priority.innerHTML = document.getElementById("priorityIn").value;
+    store.innerHTML = document.getElementById("storeIn").value;
+    section.innerHTML = document.getElementById("sectionIn").value;
+    price.innerHTML = "$" + document.getElementById("priceIn").value;
 }
 
 function clickedon() {
@@ -96,11 +95,14 @@ function sortTable(n) {
     }
 }
 
-// function storage() {
-//     localStorage.setItem(itemVal)
-//     localStorage.setItem(qtyVal)
-//     localStorage.setItem(priorityVal)
-//     localStorage.setItem(storeVal)
-//     localStorage.setItem(sectionVal)
-//     localStorage.setItem(priceVal)
-// }
+function storage() {
+    //store
+    localStorage.setItem(name, itemVal)
+    localStorage.setItem(quantity, qtyVal)
+    localStorage.setItem(priority, priorityVal)
+    localStorage.setItem(store, storeVal)
+    localStorage.setItem(section, sectionVal)
+    localStorage.setItem(price, priceVal)
+    //retrieve
+    document.getElementById
+}

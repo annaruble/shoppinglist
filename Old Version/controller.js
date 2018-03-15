@@ -95,14 +95,14 @@ function sortTable(n) {
     }
 }
 
-function storage() {
-    //store
-    localStorage.setItem(name, itemVal)
-    localStorage.setItem(quantity, qtyVal)
-    localStorage.setItem(priority, priorityVal)
-    localStorage.setItem(store, storeVal)
-    localStorage.setItem(section, sectionVal)
-    localStorage.setItem(price, priceVal)
-    //retrieve
-    document.getElementById
-}
+// function storage() {
+//     //store
+//     localStorage.setItem(name, itemVal)
+//     localStorage.setItem(quantity, qtyVal)
+//     localStorage.setItem(priority, priorityVal)
+//     localStorage.setItem(store, storeVal)
+//     localStorage.setItem(section, sectionVal)
+//     localStorage.setItem(price, priceVal)
+//     //retrieve
+//     document.getElementById
+// }

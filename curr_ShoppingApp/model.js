@@ -31,7 +31,6 @@ class Subject {
 
 class Item {
     constructor(name, quantity, priority, store, section, price) {
-//        this.check = check;
         this.name = name;
         this.quantity = quantity;
         this.priority = priority;
@@ -47,8 +46,14 @@ class Item {
     }
 
     set purchased(nv) {
-        this._purchased = nv;
-        alert(`${this.name} was purchased`)
+        if (this._purchased == false) {
+            this._purchased = nv;
+            this.publish('removed', this);
+        } else {
+            this._purchased = false;
+            clearTimeout(this.to);
+            this.publish('added', this);
+        }
     }
 
 }
@@ -59,8 +64,26 @@ class ShoppingList extends Subject {
         this.newItems = [];
         this.oldItems = [];
     }
+
     addItem(it) {
         this.newItems.push(it)
-        this.publish('newitem', this)
+        let self = this;
+        it.subscribe(function(a,b) {
+            self.publish('removed_start', self)
+            if (it.purchased == true) {
+                it.to = setTimeout(function() {
+                    self.removeItem(it);
+                }, 2000)
+            }
+        });
     }
+
+    removeItem(it) {
+        let idx = this.newItems.indexOf(it);
+        if (idx > -1) {
+            let it = this.newItems.splice(idx, 1)
+        }
+        this.publish('removed_final', this)
+    }
+
 }

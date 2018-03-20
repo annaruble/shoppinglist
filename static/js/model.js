@@ -30,8 +30,8 @@ class Subject {
 }
 
 class Item {
-    constructor(item, quantity, priority, store, section, price) {
-        this.item = name;
+    constructor(name, quantity, priority, store, section, price) {
+        this.name = name;
         this.quantity = quantity;
         this.priority = priority;
         this.store = store;
@@ -46,14 +46,14 @@ class Item {
     }
 
     set purchased(nv) {
-        this._purchased = nv;
-        alert(`${this.name} was purchased`)
-    }
-
-    markBought(purchased) {
-        this._purchased = purchased;
-        var striked = purchased.strike();
-        document.getElementsByTagName("tr").innerHTML = striked;
+        if (this._purchased == false) {
+            this._purchased = nv;
+            this.publish('removed', this);
+        } else {
+            this._purchased = false;
+            clearTimeout(this.to);
+            this.publish('added', this);
+        }
     }
 
 }
@@ -64,8 +64,27 @@ class ShoppingList extends Subject {
         this.newItems = [];
         this.oldItems = [];
     }
+
     addItem(it) {
         this.newItems.push(it)
+        let self = this;
+        it.subscribe(function(a,b) {
+            self.publish('removed_start', self)
+            if (it.purchased == true) {
+                it.to = setTimeout(function() {
+                    self.removeItem(it);
+                }, 2000)
+            }
+        });
         this.publish('newitem', this)
     }
+
+    removeItem(it) {
+        let idx = this.newItems.indexOf(it);
+        if (idx > -1) {
+            let it = this.newItems.splice(idx, 1)
+        }
+        this.publish('removed_final', this)
+    }
+
 }

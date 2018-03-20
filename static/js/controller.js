@@ -4,18 +4,18 @@ var shoppingModel = new ShoppingList()
 var myView = new ShoppingView(shoppingModel)
 var myDB = new LocalStorageSaver(shoppingModel, "annalist")
 
-shoppingModel.subscribe(redrawTable)
-
 var stores = ['Fareway', 'Ace Hardware', 'Caseys', 'The Hatchery', 'Amundsens']
 var sections = ['Produce', 'Meats', 'Cereal', 'Canned Goods', 'Frozen Foods', 'Dairy', 'Liquor', 'Tools', 'Clothing']
 
 function clickedon() {
-    let rowcolids = ['itemname', 'qty', 'store', 'category', 'price']
-    let vals = []
-    for (let cid of rowcolids) {
-        vals.push(document.getElementById(cid).value)
-    }
-    makeRow(vals, document.getElementById('shoppinglist'))
+    newItem = new Item()
+    shoppingModel.addItem(newItem)
+    // let rowcolids = ['itemname', 'qty', 'store', 'category', 'price']
+    // let vals = []
+    // for (let cid of rowcolids) {
+    //     vals.push(document.getElementById(cid).value)
+    // }
+    // makeRow(vals, document.getElementById('shoppinglist'))
 }
 
 function makeRow(valueList, parent) {

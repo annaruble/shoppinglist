@@ -9,9 +9,9 @@ class LocalStorageSaver {
         })
         if (localStorage.length != 0) {
         //now restore from local storage
-            let restore_list = JSON.parse(localStorage.getItem("annalst"))
+            let restore_list = JSON.parse(localStorage.getItem(lsname))
             for(let vals of restore_list) {
-                let it = new Item (vals.name, vals.quanitity, vals.priority, vals.store, vals.section, vals.price)
+                let it = new Item (vals.name, vals.quantity, vals.priority, vals.store, vals.section, vals.price)
                 model.addItem(it)
             }
         }

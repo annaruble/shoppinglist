@@ -34,13 +34,3 @@ class ShoppingView {
         parent.appendChild(row)
     }
 }
-
-// function redrawTable() {
-//     table = document.getElementsByTagName("table")
-//     tbodytag = document.getElementsByTagName("tbody")
-//     table.removeChild(tbodytag)
-// }
-
-
-// like the add(item.priority) is how you do CSS file to change colors
-// do soemthing like that to add strikethrough in row - add CSS class

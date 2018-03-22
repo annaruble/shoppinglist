@@ -7,6 +7,8 @@ class LocalStorageSaver {
         model.subscribe(function(slist, msg) {
             self.saveAll(slist)
         })
+
+
         if (localStorage.length != 0) {
         //now restore from local storage
             let restore_list = JSON.parse(localStorage.getItem(lsname))
@@ -19,7 +21,7 @@ class LocalStorageSaver {
 
     saveAll(slist) {
         let ls_list = JSON.stringify(slist.newItems)
-        localStorage.setItem(this.lsname, ls_list)
+        // localStorage.setItem(this.lsname, ls_list)
 
         // switching from local storage to flask
         // let config = {};

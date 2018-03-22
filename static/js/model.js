@@ -74,6 +74,7 @@ class ShoppingList extends Subject {
             if (it.purchased == true) {
                 it.to = setTimeout(function() {
                     self.removeItem(it);
+                    alert("You purchased " + it.name + "!");
                 }, 2000)
             }
         });

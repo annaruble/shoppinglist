@@ -7,13 +7,14 @@ app = Flask(__name__)
 #POST
 
 def savelist():
-    
+    print("Hello")
 
 #write json to a file
 
 @app.route("/getlist")
 #GET
-
+def getlist():
+    print("Hello")
 #read json from a file
 
 
@@ -23,4 +24,5 @@ def savelist():
 # 2) write the endpoints to save and get
 # 3) update your javascript to use fetch to save and 
 
-app.run(debug=True, port=5001)
+if __name__ == '__main__'
+    app.run(debug=True, port=5001)

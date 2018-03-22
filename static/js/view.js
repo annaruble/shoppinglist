@@ -28,7 +28,7 @@ class ShoppingView {
 
         for (let val of ['name', 'quantity', 'store', 'section', 'price']) {
             let td = document.createElement("td")
-            td.innerHTML = item[va]
+            td.innerHTML = item[val]
             row.appendChild(td)
         }
         parent.appendChild(row)

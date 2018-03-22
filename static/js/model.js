@@ -29,8 +29,9 @@ class Subject {
 
 }
 
-class Item {
+class Item extends Subject {
     constructor(name, quantity, priority, store, section, price) {
+        super()
         this.name = name;
         this.quantity = quantity;
         this.priority = priority;

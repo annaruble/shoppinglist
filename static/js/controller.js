@@ -2,7 +2,8 @@
 
 var shoppingModel = new ShoppingList()
 var myView = new ShoppingView(shoppingModel)
-var myDB = new LocalStorageSaver(shoppingModel, "annalist")
+//var myDB = new LocalStorageSaver(shoppingModel, "annalist")
+var myDB = new serverSaver(shoppingModel, "annalist")
 
 var stores = ['Fareway', 'Ace Hardware', 'Caseys', 'The Hatchery', 'Amundsens']
 var sections = ['Produce', 'Meats', 'Cereal', 'Canned Goods', 'Frozen Foods', 'Dairy', 'Liquor', 'Tools', 'Clothing']

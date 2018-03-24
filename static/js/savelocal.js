@@ -21,11 +21,6 @@ class LocalStorageSaver {
 
     saveAll(slist) {
         let ls_list = JSON.stringify(slist.newItems)
-        // localStorage.setItem(this.lsname, ls_list)
-
-        // switching from local storage to flask
-        // let config = {};
-        // let jsonStored = ls_list
-
+        localStorage.setItem(this.lsname, ls_list)
     }
 }

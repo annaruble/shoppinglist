@@ -18,9 +18,12 @@ def savelist():
         file.write(json.dumps(lst))
     return "saved"
 
+
+if __name__ == '__main__':
+    app.run()
 #write json to a file
 
-app.run(debug=True, port=5001)
+#app.run(debug=True, port=5001)
 
 ###########
 #deploy on pythonanywhere.com

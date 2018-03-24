@@ -8,24 +8,24 @@ class serverSaver {
             self.saveAll(saveList)
         });
 
-    //     fetch(`http://localhost:5001/getlist`)
-    //     .then(function(response) {
-    //         console.log(response)
-    //         return response.json()
-    //     })
+        fetch(`/getlist`)
+        .then(function(response) {
+            console.log(response)
+            return response.json()
+        })
 
-    //     .then(function(response) {
-    //         if(restore_list != null) {
-    //             for(let vals of restore_list) {
-    //                 let it = new Item (vals.name, vals.quantity, vals.priority, vals.store, vals.section, vals.price)
-    //                 model.addItem(it)
-    //             }
-    //         }
-    //     })
+        .then(function(response) {
+            if(restore_list != null) {
+                for(let vals of restore_list) {
+                    let it = new Item (vals.name, vals.quantity, vals.priority, vals.store, vals.section, vals.price)
+                    model.addItem(it)
+                }
+            }
+        })
 
-    //     .catch(error => console.error("Error: ", error))
+        .catch(error => console.error("Error: ", error))
 
-    // }
+    }
 
     saveAll(sslist) {
         let config = {};
@@ -34,7 +34,7 @@ class serverSaver {
         config.headers = {'Content-type': 'application/json',
         'Accept': 'application/json' };
 
-        fetch(`http://localhost:5001/savelist`, config)
+        fetch(`/savelist`, config)
         .then(function(response) {
             console.log(response)
             return response.json()
